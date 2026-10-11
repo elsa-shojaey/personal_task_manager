@@ -1,3 +1,4 @@
+.vscode/
 tasks.txt
 __pycache__/
 *.log

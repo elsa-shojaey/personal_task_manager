@@ -17,7 +17,7 @@ while True:
     task = input("Enter a task or type 'done' to finish: ")
     if task.lower() == "done":
         break
-    add_task(tasks, task)
+        add_task(tasks, task)
 display_tasks(tasks)
 
 with open("tasks.txt", "a") as file:

@@ -147,6 +147,8 @@ Your tasks:
 - [x] Save task information to a file .
 - [ ] Edit existing tasks .
 - [ ] search for a task by name .
+- [ ] delete a task
+
 
 ## Author
 
