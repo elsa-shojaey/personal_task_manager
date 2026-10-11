@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from tasks import add_task, display_tasks
 load_dotenv()
 admin_password = os.getenv("QUIZ_ADMIN_PASSWORD")
-open_admin = input("do u want to open admein mode ? yes/no:")
+open_admin = input("do u want to open admein mode ? yes/no: ")
 if open_admin.lower() == "yes":
     entered_password = input("enter admin password")
     if entered_password == admin_password:
@@ -18,6 +18,11 @@ while True:
     if task.lower() == "done":
         break
         add_task(tasks, task)
+    priority = input("Eter priority (low/medium/high): ")
+    while priority not in ["low", "medium", "high"]:
+        priority = input("invalid priority! please enter (low, medium, or high) .")
+        print("your priority is: ", priority)
+    add_task(tasks, task)
 display_tasks(tasks)
 
 with open("tasks.txt", "a") as file:
