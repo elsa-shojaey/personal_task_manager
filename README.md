@@ -12,7 +12,7 @@ A simple Personal Task Manager built with Python
 - [Installation](#installation)
 - [Usage](#usage)
 - [Example Output](#example-output)
-- [Screenshots](#screen-shot)
+- [Screenshots](#screenshots)
 - [Roadmap](#roadmap)
 - [Author](#author)
 
@@ -20,7 +20,10 @@ A simple Personal Task Manager built with Python
 - Task Management
   - Gets the user's name .
   - Allows the user to add multiple tasks .
+  - Supports three priority levels: low, medium, and high .
+  - Validates task priority input .
   - Displays the tasks entered by the user .
+  - 
 - Task Storage
   - Saves the user's tasks in a `tasks.txt` file .
 - Admin Mode
@@ -28,6 +31,7 @@ A simple Personal Task Manager built with Python
   - checks if the password is correct .
   - keeps the private information  outside the main python file .
   - Loads the password from `.env` .
+
 
 ## Project Structure
 ```text
@@ -46,6 +50,7 @@ C:.
 │       1.png
 │       2.png
 │       3.png
+│       4.png
 └───
 ```
 ### File Description
@@ -58,9 +63,6 @@ C:.
 | `.gitignore` | tells git which files and folders shold not be tracked|
 | `README.md` | contains the project documentation|
 | `pictures/` | stores project screenshots|
-| `pictures\1.png` | screenshot of the game start|
-| `pictures\2.png` | screenshot of the task section|
-| `pictures\3.png` | screenshot of final result|
 | `gifs/` | stores demo GIF files|
 | `gifs/demo.gif` | shows the project demo|
 
@@ -115,21 +117,27 @@ Enter your name: elsa
 Welcome, elsa
 
 Enter a task or type 'done' to finish: hello
+Eter priority (low/medium/high): low
 
-Enter a task or type 'done' to finish: how are you
+Enter a task or type 'done' to finish: hi
+Eter priority (low/medium/high): love
+invalid priority! please enter (low, medium, or high) .hikjl
+your priority is:  hikjl
+invalid priority! please enter (low, medium, or high) .high
+your priority is:  high
 
 Enter a task or type 'done' to finish: done
 
 Your tasks:
 - hello
-- how are you
+- hh
 ```
 
 ## Screenshots
 ### Admin Mode
 ![start game](pictures\1.png)
 
-### Adding and Display Tasks
+### Task Management
 ![quiz](pictures\2.png)
 
 ### Final Result 
@@ -145,6 +153,7 @@ Your tasks:
 - [x] Add Admin Mode
 - [x] Load the admin password from `.env` .
 - [x] Save task information to a file .
+- [x] Validate task priority input .
 - [ ] Edit existing tasks .
 - [ ] search for a task by name .
 - [ ] delete a task
